@@ -2,10 +2,12 @@ import * as React from 'react'
 
 import './list-content.sass'
 
+import Header from '@components/Header/header'
 import drawerDate from '@date/drawer'
 
 interface ListContentState {
-    content: string
+    content: string,
+    imgPath: string
 }
 
 class ListContent extends React.Component<{},  ListContentState > {
@@ -15,14 +17,19 @@ class ListContent extends React.Component<{},  ListContentState > {
     constructor(props: any) {
         super(props)
         this.state = {
-            content : ''
+            content : '',
+            imgPath : ''
         }
     }
     
     render(){
         return(
             <div className="list-content">
-                {this.state.content}
+                <Header />
+                <div className="content-image" style={{ backgroundImage: `url(${this.state.imgPath})` }}></div>
+                <p className="content-zzc">
+                    {this.state.content}
+                </p>
             </div>
         )
     }
@@ -31,7 +38,8 @@ class ListContent extends React.Component<{},  ListContentState > {
         drawerDate.all().map((i: any) => {
             if (i.id.toString() === document.location.hash.split('/')[2]){
                 this.setState({
-                    content: i.Content
+                    content: i.Content,
+                    imgPath: i.bgPath
                 })
             }
         })

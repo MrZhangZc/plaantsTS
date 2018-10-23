@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 
 import DrawerPage from '@page/Drawer/drawer'
 import Retrieval from '@components/Retrieval/retrieval'
-import ListContent from '@components/ListContent/list-content'
+import ListContent from '@page/ListContent/list-content'
 
 import P1ImageAPI from '@datep/p1'
 import C1ImageAPI from '@datec/c1'
