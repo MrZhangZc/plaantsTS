@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "target": "es5",
+        "jsx": "react",
+        "paths": {
+            "@components/*": [ "./src/components/*"],
+            "@page/*": [ "./src/page/*"],
+            "@images/*": ["./src/public/images/*"],
+            "@fonts/*": ["./src/public/fonts/*"],
+            "@datep/*": ["./src/date/p/*"],
+            "@datec/*": ["./src/date/c/*"],
+            "@date/*": ["./src/date/*"],
+        },
+    },
+    "include": [
+        "./src/**/*"
+    ]
+}
